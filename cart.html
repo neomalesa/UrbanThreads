@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  //Cart Checkout
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Urban Threads</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <!-- Nav Bar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="container cart">
+
+    <div class="header cart-header">
+      <h1>Your Cart</h1>
+    </div>
+
+    <!-- cart items -->
+    <div class="grid">
+      <div class="items" id="items-container">
+
+        <!-- Cart items injected here -->
+        <p>Loading cart...</p>
+
+      </div>
+
+      <!-- cart summary -->
+      <div class="summary">
+        <h3>Order Summary</h3>
+        <div class="row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">R0.00</span>
+        </div>
+        <div class="row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="total">
+          <span>Total</span>
+          <span id="cart-total">R0.00</span>
+        </div>
+        <button class="btn accent checkout">Proceed to Checkout</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Scripts -->
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Landing Page  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads | Streetwear Defined</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">Urban<span>Threads</span></a></div>
+    
+    <!-- links to landing + shop page  -->
+    <ul class="links">
+      <li><a href="index.html" class="link" data-path="index.html">Home</a></li>
+      <li><a href="shop.html" class="link" data-path="shop.html">Shop</a></li>
+    </ul>
+    <!-- login/logout + cart +  -->
+    <div class="auth">
+      <span class="email" id="email"></span>
+      <a href="login.html" class="link" id="login-link" data-path="login.html">Login</a>
+
+      <!-- if logged in -->
+      <a href="#" class="link" id="logout-link">Logout</a> 
+      <a href="cart.html" class="link cart-icon" data-path="cart.html">
+        Cart
+        <span class="badge" id="badge">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1>Streetwear<br>Defined.</h1>
+      <p>Discover the latest trends in premium casual wear. Elevate your everyday style with Urban Threads.</p>
+      <a href="shop.html" class="btn primary">Shop The Collection</a>
+    </div>
+  </header>
+
+  <!-- Notification slider  -->
+  <div id="notification"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
