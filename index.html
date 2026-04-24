@@ -26,6 +26,9 @@
 
       <!-- if logged in -->
       <a href="#" class="link" id="logout-link">Logout</a> 
+      <a href="#" class="link" id="search-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </a>
       <a href="cart.html" class="link cart-icon" data-path="cart.html">
         Cart
         <span class="badge" id="badge">0</span>
@@ -44,6 +47,15 @@
 
   <!-- Notification slider  -->
   <div id="notification"></div>
+
+  <!-- Search Panel Overlay -->
+  <div id="search-panel" class="search-panel">
+    <button class="close-search" id="close-search">&times;</button>
+    <div class="search-container">
+      <input type="text" id="search-input" class="search-input" placeholder="Search for premium apparel...">
+      <div id="search-results" class="search-results grid"></div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script type="module" src="js/firebase-config.js"></script>
