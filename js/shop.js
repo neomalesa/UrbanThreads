@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     const productsSnapshot = await getDocs(collection(db, 'products'));
-    
+
     if (productsSnapshot.empty) {
       productsGrid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     productsSnapshot.forEach((docSnap) => {
       const product = docSnap.data();
       const productId = docSnap.id;
-      
+
       const card = document.createElement('div');
       card.className = 'card';
       card.setAttribute('data-card-category', product.category);
-      
+
       card.innerHTML = `
         <img src="${product.imageURL}" alt="${product.name}" class="image" onerror="this.src='https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=60'">
         <div class="info">
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         <button class="add" data-id="${productId}">Add to Cart</button>
       `;
-      
+
       productsGrid.appendChild(card);
     });
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
           const productRef = doc(db, 'products', productId);
           const productSnap = await getDoc(productRef);
-          
+
           if (productSnap.exists()) {
             const productData = productSnap.data();
             const cartItemRef = doc(db, `users/${user.uid}/cart`, productId);
